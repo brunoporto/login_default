@@ -84,21 +84,6 @@ body {
     margin-top: 10px;
     width: 250px;
 }
-.btn-passaporteweb {
-    color: #fff;
-    background-color: #fbb03b;
-    border-color: #fbb03b;
-}
-.btn-passaporteweb:focus,
-.btn-passaporteweb.focus,
-.btn-passaporteweb:hover,
-.btn-passaporteweb:active,
-.btn-passaporteweb.active {
-    color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512;
-}
-
 .btn-google {
     color: #fff;
     background-color: #EA4335;
@@ -114,15 +99,13 @@ body {
     border-color: #ac2925;
 }
 
-.btn-google img,
-.btn-passaporteweb img {
+.btn-google img {
     margin-left: -10px;
     margin-top: -4px;
     padding: 6px;
     float: left;
     border-radius: 3px
 }
-.btn-passaporteweb img {background-color: #2D3E50;}
 .btn-google img {background-color: #FFFFFF;}
 
 

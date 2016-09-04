@@ -9,9 +9,6 @@ LoginDefault.configuration do |config|
   #Show google login button?
   config.enable_google = true
 
-  #Show passaporte web login button?
-  config.enable_passaporte_web = true
-
   #Show create account link?
   config.enable_create_account = false
 

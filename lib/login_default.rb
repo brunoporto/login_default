@@ -13,8 +13,7 @@ module LoginDefault
   define_setting :app_name, 'Sistema da MeuSistema'
   define_setting :logo_file_name, 'login_default.png'
   define_setting :enable_google, true
-  define_setting :enable_passaporte_web, true
   define_setting :enable_create_account, false
-  define_setting :url_create_account, 'http://www.taxweb.com.br/'
+  define_setting :url_create_account, 'http://www.brunoporto.com.br/'
 
 end

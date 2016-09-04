@@ -4,7 +4,7 @@ module LoginDefault
     include Devise::Controllers::Helpers
 
     included do
-      devise :database_authenticatable, :recoverable, :invitable, :rememberable, :trackable, :validatable, :omniauthable, {:omniauth_providers => [:google_oauth2, :passaporte_web]}
+      devise :database_authenticatable, :recoverable, :invitable, :rememberable, :trackable, :validatable, :omniauthable, {:omniauth_providers => [:google_oauth2]}
     end
 
     module ClassMethods

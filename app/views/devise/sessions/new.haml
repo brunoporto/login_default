@@ -24,18 +24,13 @@
             .checkbox.checkbox-primary
               = f.check_box :remember_me, id: 'checkbox-signup'
               = f.label :remember_me, 'Manter conectado'
-      - if devise_mapping.omniauthable? && (LoginDefault.enable_google==true or LoginDefault.enable_passaporte_web==true)
+      - if devise_mapping.omniauthable? && (LoginDefault.enable_google==true)
         %hr.m-b-0
         .form-group.m-b-0.text-center
           .col-sm-12
             %i ou autenticar com
-          - if LoginDefault.enable_passaporte_web
-            %div{class: "col-xs-#{LoginDefault.enable_google==false ? '12' : '6'}"}
-              = link_to omniauth_authorize_path(resource_name, :passaporte_web), class: 'btn btn-block btn-passaporteweb m-t-10' do
-                = image_tag 'login_default/16x16_passaporteweb.png'
-                PassaporteWeb
           - if LoginDefault.enable_google
-            %div{class: "col-xs-#{LoginDefault.enable_passaporte_web==false ? '12' : '6'}"}
+            %div{class: "col-xs-12"}
               = link_to omniauth_authorize_path(resource_name, :google_oauth2), class: 'btn btn-block btn-google m-t-10' do
                 = image_tag 'login_default/16x16_google.png'
                 Google
