@@ -1,0 +1,29 @@
+production:
+  google_client_id: ''
+  google_client_secret: ''
+  passaporte_web_app_slug: ''
+  passaporte_web_app_id: ''
+  passaporte_web_app_secret: ''
+  passaporte_web_url: ''
+staging:
+  google_client_id: ''
+  google_client_secret: ''
+  passaporte_web_app_slug: ''
+  passaporte_web_app_id: ''
+  passaporte_web_app_secret: ''
+  passaporte_web_url: ''
+development:
+  google_client_id: ''
+  google_client_secret: ''
+  passaporte_web_app_slug: ''
+  passaporte_web_app_id: ''
+  passaporte_web_app_secret: ''
+  passaporte_web_url: ''
+test:
+  google_client_id: ''
+  google_client_secret: ''
+  passaporte_web_app_slug: ''
+  passaporte_web_app_id: ''
+  passaporte_web_app_secret: ''
+  passaporte_web_url: ''
+

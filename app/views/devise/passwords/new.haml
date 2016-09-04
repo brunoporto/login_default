@@ -1,0 +1,17 @@
+.panel-heading
+  .panel-body
+    = form_for resource, as: resource_name, url: password_path(resource_name), html: {method: :post, class: 'form-horizontal m-t-20'} do |f|
+
+      %h4.m-b-10.l-h-25.text-center Informe seu e-mail para receber as instruções de recuperação de senha.
+
+      .form-group
+        .col-xs-12.has-feedback.has-feedback-left
+          = f.label :email, class: 'control-label'
+          = f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'E-mail', required: true
+          %i.glyphicon.glyphicon-envelope.form-control-feedback
+
+      .form-group
+        .col-xs-6.text-left
+          = f.submit 'Enviar', class: 'btn btn-primary'
+        .col-xs-6.text-right
+          = link_to 'Voltar para Login', new_session_path(resource_name), class: 'btn btn-default'

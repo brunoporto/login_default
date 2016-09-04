@@ -1,0 +1,292 @@
+/*
+ *= require 'login_default/bootstrap.min'
+ *= require 'login_default/bootstrap_feedback_patch'
+ *= require 'login_default/bootstrap_fonts'
+ *= require 'login_default/sweetalert'
+ *= require 'login_default/background'
+ *= require_self
+*/
+
+* {
+    outline: none !important;
+}
+body {
+    background: #ebeff2;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    padding-bottom: 65px;
+    overflow-x: hidden;
+    color: #797979;
+}
+.account-pages {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.wrapper-page {
+    margin: 5% auto;
+    position: relative;
+    width: 420px;
+}
+.wrapper-page .card-box {
+    border: 1px solid rgba(54, 64, 74, 0.1);
+}
+.card-box {
+    /*padding: 20px;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+.form-horizontal .form-group {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    color: #565656;
+    padding: 7px 12px;
+    height: 38px;
+    max-width: 100%;
+    box-shadow: none;
+}
+.checkbox {
+    padding-left: 20px;
+}
+.checkbox label {
+    display: inline-block;
+    padding-left: 5px;
+    position: relative;
+}
+.text-dark {
+    color: #797979 !important;
+}
+.btn-primary, .btn-success, .btn-default, .btn-info, .btn-warning, .btn-danger, .btn-inverse, .btn-purple, .btn-pink {
+    /*color: #ffffff !important;*/
+}
+.btn {
+    border-radius: 3px;
+    outline: none !important;
+}
+.panel-body {
+    padding: 0px;
+}
+.taxweb_app_logo {
+    padding: 10px;
+    text-align: center;
+}
+.taxweb_app_logo img {
+    margin-top: 10px;
+    width: 250px;
+}
+.btn-passaporteweb {
+    color: #fff;
+    background-color: #fbb03b;
+    border-color: #fbb03b;
+}
+.btn-passaporteweb:focus,
+.btn-passaporteweb.focus,
+.btn-passaporteweb:hover,
+.btn-passaporteweb:active,
+.btn-passaporteweb.active {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.btn-google {
+    color: #fff;
+    background-color: #EA4335;
+    border-color: #EA4335;
+}
+.btn-google:focus,
+.btn-google.focus,
+.btn-google:active,
+.btn-google.active,
+.btn-google:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.btn-google img,
+.btn-passaporteweb img {
+    margin-left: -10px;
+    margin-top: -4px;
+    padding: 6px;
+    float: left;
+    border-radius: 3px
+}
+.btn-passaporteweb img {background-color: #2D3E50;}
+.btn-google img {background-color: #FFFFFF;}
+
+
+/* =============
+   Helper clasess
+============= */
+.p-0 {
+    padding: 0px !important;
+}
+.p-20 {
+    padding: 20px !important;
+}
+.p-30 {
+    padding: 30px !important;
+}
+.p-l-0 {
+    padding-left: 0px !important;
+}
+.p-r-0 {
+    padding-right: 0px !important;
+}
+.p-t-0 {
+    padding-top: 0px !important;
+}
+.p-t-10 {
+    padding-top: 10px !important;
+}
+.p-b-10 {
+    padding-bottom: 10px !important;
+}
+.p-l-r-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.m-0 {
+    margin: 0px !important;
+}
+.m-r-5 {
+    margin-right: 5px !important;
+}
+.m-r-10 {
+    margin-right: 10px !important;
+}
+.m-r-15 {
+    margin-right: 15px !important;
+}
+.m-l-5 {
+    margin-left: 5px !important;
+}
+.m-l-10 {
+    margin-left: 10px !important;
+}
+.m-l-15 {
+    margin-left: 15px !important;
+}
+.m-t-5 {
+    margin-top: 5px !important;
+}
+.m-t-0 {
+    margin-top: 0px !important;
+}
+.m-t-10 {
+    margin-top: 10px !important;
+}
+.m-t-15 {
+    margin-top: 15px !important;
+}
+.m-t-20 {
+    margin-top: 20px !important;
+}
+.m-t-30 {
+    margin-top: 30px !important;
+}
+.m-t-40 {
+    margin-top: 40px !important;
+}
+.m-b-0 {
+    margin-bottom: 0px !important;
+}
+.m-b-5 {
+    margin-bottom: 5px !important;
+}
+.m-b-10 {
+    margin-bottom: 10px !important;
+}
+.m-b-15 {
+    margin-bottom: 15px !important;
+}
+.m-b-20 {
+    margin-bottom: 20px !important;
+}
+.m-b-30 {
+    margin-bottom: 30px !important;
+}
+.w-xs {
+    min-width: 80px;
+}
+.w-sm {
+    min-width: 95px;
+}
+.w-md {
+    min-width: 110px;
+}
+.w-lg {
+    min-width: 140px;
+}
+.m-h-40 {
+    min-height: 40px;
+}
+.m-h-50 {
+    min-height: 50px;
+}
+.l-h-25 {
+    line-height: 25px;
+}
+.l-h-34 {
+    line-height: 34px;
+}
+.font-600 {
+    font-weight: 600;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-normal {
+    font-weight: normal;
+}
+.font-light {
+    font-weight: 300;
+}
+.font-13 {
+    font-size: 13px !important;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.pull-in {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.b-0 {
+    border: none !important;
+}
+.vertical-middle {
+    vertical-align: middle;
+}
+.bx-shadow {
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.mx-box {
+    max-height: 380px;
+    min-height: 380px;
+}
+.thumb-sm {
+    height: 32px;
+    width: 32px;
+}
+.thumb-md {
+    height: 48px;
+    width: 48px;
+}
+.thumb-lg {
+    height: 88px;
+    width: 88px;
+}

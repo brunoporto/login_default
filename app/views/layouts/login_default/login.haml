@@ -1,0 +1,28 @@
+!!!
+%html{:lang => 'pt-BR'}
+  %head
+    = favicon_link_tag 'login_default/favicon_taxweb.png'
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %meta{ 'http-equiv' => 'Content-Language', content: 'pt-BR'}
+    %title= content_for?(:title) ? yield(:title) : " #{LoginDefault.app_name} - Login MeuSistema"
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'MeuSistema'}"}
+    = stylesheet_link_tag 'login_default', media: "all", "data-turbolinks-track" => false
+    = javascript_include_tag 'login_default', "data-turbolinks-track" => false
+    = csrf_meta_tags
+  %body
+    .account-pages
+    .clearfix
+    .wrapper-page
+      .card-box.p-b-10
+        = render 'layouts/login_default/messages'
+        - if LoginDefault.logo_file_name.present?
+          .taxweb_app_logo.m-t-10
+            = image_tag LoginDefault.logo_file_name
+        = yield
+      - if LoginDefault.enable_create_account==true
+        .row
+          .col-sm-12.text-center
+            %p
+              Ainda não possui uma conta?
+              = link_to LoginDefault.url_create_account, class: 'text-primary m-l-5' do
+                %b Crie uma

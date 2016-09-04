@@ -1,0 +1,41 @@
+.panel-heading
+  .panel-body
+    = form_for resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal m-t-20'} do |f|
+
+      .form-group
+        .col-xs-12.has-feedback.has-feedback-left
+          -#= f.label :email, class: 'control-label'
+          = f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'E-mail', required: true
+          %i.glyphicon.glyphicon-envelope.form-control-feedback
+      .form-group.m-b-5
+        .col-xs-12.has-feedback.has-feedback-left
+          -#= f.label :password, class: 'control-label'
+          = f.password_field :password, autocomplete: false, class: 'form-control', placeholder: 'Senha', required: true
+          %i.glyphicon.glyphicon-lock.form-control-feedback
+      .form-group.m-t-0
+        .col-sm-12.text-right
+          = link_to 'Esqueceu a senha?', new_password_path(resource_name), class: 'text-dark'
+
+      .form-group
+        .col-xs-6.text-left
+          = f.submit 'Conectar', class: 'btn btn-primary btn-block'
+        - if devise_mapping.rememberable?
+          .col-xs-6.text-right
+            .checkbox.checkbox-primary
+              = f.check_box :remember_me, id: 'checkbox-signup'
+              = f.label :remember_me, 'Manter conectado'
+      - if devise_mapping.omniauthable? && (LoginDefault.enable_google==true or LoginDefault.enable_passaporte_web==true)
+        %hr.m-b-0
+        .form-group.m-b-0.text-center
+          .col-sm-12
+            %i ou autenticar com
+          - if LoginDefault.enable_passaporte_web
+            %div{class: "col-xs-#{LoginDefault.enable_google==false ? '12' : '6'}"}
+              = link_to omniauth_authorize_path(resource_name, :passaporte_web), class: 'btn btn-block btn-passaporteweb m-t-10' do
+                = image_tag 'login_default/16x16_passaporteweb.png'
+                PassaporteWeb
+          - if LoginDefault.enable_google
+            %div{class: "col-xs-#{LoginDefault.enable_passaporte_web==false ? '12' : '6'}"}
+              = link_to omniauth_authorize_path(resource_name, :google_oauth2), class: 'btn btn-block btn-google m-t-10' do
+                = image_tag 'login_default/16x16_google.png'
+                Google

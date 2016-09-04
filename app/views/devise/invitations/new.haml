@@ -1,0 +1,17 @@
+.panel-heading
+  .panel-body
+    = form_for resource, as: resource_name, url: invitation_path(resource_name), html: {method: :post, class: 'form-horizontal m-t-20'} do |f|
+
+      %h4.m-b-10.l-h-25.text-center Enviar Convites de Acesso
+
+      - resource.class.invite_key_fields.each do |field|
+        .form-group
+          .col-xs-12
+            = f.label field, class: 'control-label'
+            = f.text_field field, class: 'form-control'
+
+      .form-group
+        .col-xs-6.text-left
+          = f.submit 'Enviar', class: 'btn btn-primary'
+        .col-xs-6.text-right
+          = link_to 'Voltar para Login', new_session_path(resource_name), class: 'btn btn-default'

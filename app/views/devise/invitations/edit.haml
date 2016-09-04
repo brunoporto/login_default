@@ -1,0 +1,27 @@
+.panel-heading
+  .panel-body
+    = form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put, class: 'form-horizontal m-t-20' } do |f|
+      = f.hidden_field :invitation_token
+
+      %h4.m-b-10.l-h-25.text-center Informe sua nova senha
+      .form-group.has-feedback.has-feedback-left
+        .col-xs-12
+          = f.label :password, class: 'control-label'
+          = f.password_field :password, autofocus: true, autocomplete: 'off', class: 'form-control'
+          %i.glyphicon.glyphicon-lock.form-control-feedback
+          - if @minimum_password_length
+            .help-block
+              Mínimo
+              = @minimum_password_length
+              caracteres
+      .form-group.has-feedback.has-feedback-left
+        .col-xs-12
+          = f.label :password_confirmation, class: 'control-label'
+          = f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control'
+          %i.glyphicon.glyphicon-lock.form-control-feedback
+
+      .form-group
+        .col-xs-6.text-left
+          = f.submit t("devise.invitations.edit.submit_button"), class: 'btn btn-primary'
+        .col-xs-6.text-right
+          = link_to 'Voltar para Login', new_session_path(resource_name), class: 'btn btn-default'

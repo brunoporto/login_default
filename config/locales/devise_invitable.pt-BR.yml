@@ -1,0 +1,14 @@
+pt-BR:
+  devise:
+    invitations:
+      send_instructions: 'Um convite para acessar o sistema foi enviado para o e-mail %{email}.'
+      invitation_token_invalid: 'A chave do convite enviado não é válido!'
+      updated: 'Sua senha foi definida com sucesso. Você agora está conectado.'
+      no_invitations_remaining: "Nào existem convites pendentes"
+      invitation_removed: 'Seu convite foi removido.'
+      new:
+        header: "Convidar Usuários"
+        submit_button: "Enviar o convite"
+      edit:
+        header: "Defina sua senha"
+        submit_button: "Defina minha senha"
