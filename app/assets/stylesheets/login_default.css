@@ -76,11 +76,11 @@ body {
 .panel-body {
     padding: 0px;
 }
-.taxweb_app_logo {
+.login_default_app_logo {
     padding: 10px;
     text-align: center;
 }
-.taxweb_app_logo img {
+.login_default_app_logo img {
     margin-top: 10px;
     width: 250px;
 }

@@ -13,6 +13,6 @@ LoginDefault.configuration do |config|
   config.enable_create_account = false
 
   #Create account page url
-  config.url_create_account = 'http://www.taxweb.com.br/'
+  config.url_create_account = 'http://www.login_default.com.br/'
 
 end

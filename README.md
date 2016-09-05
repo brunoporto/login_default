@@ -12,7 +12,7 @@ MeuSistema Login é uma GEM Rails que facilita a implementação de autenticaç�
 * Edite o seu arquivo Gemfile e remova a gem **devise** e qualquer outra gem **devise_**
 * Adicione a gem login_default:
 ```ruby
-gem 'login_default', :git => 'https://OAUTH_TOKEN:x-oauth-basic@github.com/taxweb/login_default'
+gem 'login_default', :git => 'https://OAUTH_TOKEN:x-oauth-basic@github.com/brunotporto/login_default'
 ```
 
 * Remova qualquer referência do **devise_for** em routes.rb e **devise** do seu Model User

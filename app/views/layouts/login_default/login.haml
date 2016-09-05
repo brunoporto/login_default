@@ -1,7 +1,7 @@
 !!!
 %html{:lang => 'pt-BR'}
   %head
-    = favicon_link_tag 'login_default/favicon_taxweb.png'
+    = favicon_link_tag 'login_default/favicon_login_default.png'
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %meta{ 'http-equiv' => 'Content-Language', content: 'pt-BR'}
     %title= content_for?(:title) ? yield(:title) : " #{LoginDefault.app_name} - Login MeuSistema"
@@ -16,7 +16,7 @@
       .card-box.p-b-10
         = render 'layouts/login_default/messages'
         - if LoginDefault.logo_file_name.present?
-          .taxweb_app_logo.m-t-10
+          .login_default_app_logo.m-t-10
             = image_tag LoginDefault.logo_file_name
         = yield
       - if LoginDefault.enable_create_account==true
