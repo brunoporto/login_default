@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Essa gem implementa a autenticação via Devise e possibilita que você possa usar autenticação interna, Google e Outros"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency 'rails', '~> 5.0.0', '>= 5.0.0.1'
